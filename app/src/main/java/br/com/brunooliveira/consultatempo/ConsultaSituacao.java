@@ -41,9 +41,6 @@ public class ConsultaSituacao extends AsyncTask<Void, Void, String> {
             e.printStackTrace();
             return null;
         }
-
-
-
     }
 
     private String interpretaResultado(String resultado) throws JSONException {
