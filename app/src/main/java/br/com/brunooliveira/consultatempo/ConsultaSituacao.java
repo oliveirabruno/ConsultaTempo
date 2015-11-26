@@ -22,7 +22,7 @@ public class ConsultaSituacao extends AsyncTask<Void, Void, String> {
 
     private ConsultaSituacaoTempoListener listener;
     //URL padrão da API. Para maiores informações, consulte o site http://openweathermap.org/
-    private static final String URLLocal = "http://api.openweathermap.org/data/2.5/weather?q=Salvador,br&appid=2de143494c0b295cca9337e1e96b00e0";
+    private static final String URLLocal = "http://api.openweathermap.org/data/2.5/weather?q=Salvador,br&appid=779c8195e6d62b92cda391166bef6f28";
 
     public ConsultaSituacao(ConsultaSituacaoTempoListener listener){
         this.listener=listener;
@@ -66,8 +66,8 @@ public class ConsultaSituacao extends AsyncTask<Void, Void, String> {
         try{
             URL url = new URL(URLLocal);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-            conn.setReadTimeout(10000);
-            conn.setConnectTimeout(15000);
+            conn.setReadTimeout(15000);
+            conn.setConnectTimeout(25000);
             conn.setRequestMethod("GET");
             conn.setDoOutput(true);
             conn.connect();
